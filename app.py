@@ -18,14 +18,12 @@ st.sidebar.header(" Customer Information")
 
 age = st.sidebar.slider("Age", 18, 80, 30)
 tenure = st.sidebar.slider("Tenure (Months)", 0, 60, 12)
-balance = st.sidebar.number_input("Balance", 0.0, 100000.0, 5000.0)
-salary = st.sidebar.number_input("Estimated Salary", 0.0, 200000.0, 50000.0)
 
 gender = st.sidebar.selectbox("Gender", ["Male", "Female"])
 gender = 0 if gender == "Male" else 1
 
 # Arrange input
-input_data = np.array([[age, tenure, balance, salary, gender]])
+input_data = np.array([[age, tenure, gender]])
 
 # Apply scaling only on Age & Tenure
 input_data[:, [0,1]] = scaler.transform(input_data[:, [0,1]])
