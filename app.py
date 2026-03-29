@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 import joblib
 
-st.set_page_config(page_title="Churn Prediction", page_icon="📊", layout="wide")
+st.set_page_config(page_title="Churn Prediction", page_icon="", layout="wide")
 
 st.markdown("""
     <style>
@@ -49,7 +49,7 @@ col_t1, col_t2 = st.columns([1, 4])
 with col_t1:
     st.image("https://cdn-icons-png.flaticon.com/512/2103/2103633.png", width=100) # Generic AI Icon
 with col_t2:
-    st.title("ChurnGuard AI")
+    st.title("Churn Prediction")
     st.caption("Advanced Predictive Analytics for Customer Retention")
 
 st.divider()
